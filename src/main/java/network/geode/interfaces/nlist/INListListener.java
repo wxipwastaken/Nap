@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
 
-public interface INListListener<E> extends IAddAllIndexListener<E>, IAddAllListener<E>, IAddIndexListener<E>, IAddListener<E>, IClearListener, IGetListener, IRemoveAllListener, IRemoveIndexListener, IRemoveListener, IRemoveRangeListener, IRetainAllListener, ISetListener<E> {
+public interface INListListener<E> extends IAddAllIndexListener<E>, IAddAllListener<E>, IAddIndexListener<E>, IAddListener<E>, IClearListener, IRemoveAllListener, IRemoveIndexListener, IRemoveListener, IRemoveRangeListener, IRetainAllListener, ISetListener<E> {
     void onAddAll(Collection<? extends E> collection);
 
     void onAddAll(int index, Collection<? extends E> collection);
@@ -14,8 +14,6 @@ public interface INListListener<E> extends IAddAllIndexListener<E>, IAddAllListe
     void onAddListener(int index, E element);
 
     void onClear();
-
-    void onGetListener(int index);
 
     void onRemoveAll(@NotNull Collection<?> collection);
 
@@ -27,5 +25,5 @@ public interface INListListener<E> extends IAddAllIndexListener<E>, IAddAllListe
 
     void onRetainAll(@NotNull Collection<?> collection);
 
-    void onSetListener(int index, E element);
+    void onSet(int index, E element);
 }

@@ -1,5 +1,5 @@
 package network.geode.interfaces.nlist;
 
 public interface IRemoveIndexListener {
-    void onRemove(Object o);
+    void onRemove(int index);
 }

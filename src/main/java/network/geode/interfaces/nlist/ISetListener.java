@@ -1,5 +1,5 @@
 package network.geode.interfaces.nlist;
 
 public interface ISetListener<E> {
-    void onSetListener(int index, E element);
+    void onSet(int index, E element);
 }
