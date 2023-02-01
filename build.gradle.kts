@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("maven-publish")
 }
 
 group = "network.geode"
@@ -13,4 +14,16 @@ repositories {
 
 dependencies {
     compileOnly("org.jetbrains:annotations:$jetbrainsAnnotations")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "network.geode"
+            artifactId = "Nap"
+            version = "1.0"
+
+            from(components["java"])
+        }
+    }
 }
